@@ -20,6 +20,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
 /* navbar */
 
 .navbar {
@@ -105,9 +109,10 @@ body {
   border: 1px solid #cecece;
   border-radius: 10px;
   padding: 10px 30px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   transition: 0.5s;
   margin-right: 20px;
+  text-align: center;
 }
 
 .header-img-container {
@@ -217,7 +222,7 @@ body {
   width: 50%;
 }
 
-.info p {
+.info div {
   font-size: 1.2rem;
   line-height: 2rem;
   margin: 30px 0;
@@ -577,7 +582,7 @@ textarea {
   }
 
   .about-img {
-    width: 100%;
+    width: 90%;
   }
 
   /* Timeline */
@@ -703,7 +708,7 @@ textarea {
   }
 
   .project-card.active .project-thumbnail {
-    width: 300px;
+    width: 200px;
     height: 200px;
   }
 
@@ -711,4 +716,38 @@ textarea {
     height: auto;
     width: 300px;
   }
+
+  .square {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    background: #a50101;
+    position: absolute;
+    right:20px;
+    top: -25px;
+    z-index: -1;
+    transform: rotate(45deg);
+  }
+
+  .about-img {
+    width: 90%;
+  }
+
+  .btn.about {
+    display: block;
+    margin: 0.5rem;
+
+  }
+
+  .filter, .skills {
+    gap: 10px;
+  }
+
+  .info div {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  margin: 0px 0;
+  text-align: center;
 }
+}
+

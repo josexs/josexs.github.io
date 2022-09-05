@@ -28,7 +28,7 @@ const tags = document.querySelectorAll(".filter-btn");
 tags.forEach((btn) => {
   btn.addEventListener("click", () => {
     projects.forEach((card) => {
-      if (btn.innerHTML.toLowerCase() == "all") {
+      if (btn.innerHTML.toLowerCase() == "todos") {
         card.style.display = "block";
       } else {
         if (
@@ -66,11 +66,24 @@ toggleBtn.addEventListener("click", () => {
 });
 
 
-const socialUrls = () => {
+const aboutMe = () => {
   const github = document.getElementById('github');
-  const twitter = document.getElementById('twitter');
   const linkedin = document.getElementById('linkedin');
+  const info = document.getElementById('info');
   github.href = 'https://github.com/josexs';
+  linkedin.href = 'https://www.linkedin.com/in/jose-xs-gomez/';
+  info.innerHTML = `Madrileño de 35 años, autodidacta desde los 10 años en el mundo de la informática. <br><br>
+
+  Aprendiendo a desarrollar con 15 años, he ido creando webs, aplicaciones frontend y backend, en diferentes lenguajes.<br><br>
+  
+  En mis ratos libres, me dedico a desarrollar un nuevo proyecto hibrido llamado CarsTournaments, con Ionic 6, Angular 12, y NodeJS<br>`;
 }
 
-socialUrls()
+const skills = () => {
+  const skills = ['HTML', 'CSS3', 'SASS', 'Javascript', 'Typescript', 'Python', 'Markdown', 'Dart', 'Shell', 'Ionic', 'Angular', 'AngularJS', 'Capacitor', 'Bootstrap', 'ExpressJS', 'Flutter'];
+  const skillsDiv = document.getElementById('skills');
+  skills.forEach((skill)=> skillsDiv.innerHTML += `<p class="skill-name">${skill}</p>`)
+}
+
+aboutMe()
+skills()
