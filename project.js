@@ -1,6 +1,6 @@
 let projectData = [
   {
-    image: "img/project-1.png",
+    image: "assets/img/project-1.png",
     name: "project one",
     detail:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, augue quis rutrum auctor, erat est mattis velit, vel luctus est nisl",
@@ -9,7 +9,7 @@ let projectData = [
     tags: "#javascript, #fullstack, #css",
   },
   {
-    image: "img/project-2.png",
+    image: "assets/img/project-2.png",
     name: "project two",
     detail:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, augue quis rutrum auctor, erat est mattis velit, vel luctus est nisl",
@@ -18,7 +18,7 @@ let projectData = [
     tags: "#javascript, #css",
   },
   {
-    image: "img/project-3.png",
+    image: "assets/img/project-3.png",
     name: "project three",
     detail:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, augue quis rutrum auctor, erat est mattis velit, vel luctus est nisl",
@@ -27,7 +27,7 @@ let projectData = [
     tags: "#javascript",
   },
   {
-    image: "img/project-4.png",
+    image: "assets/img/project-4.png",
     name: "project four",
     detail:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, augue quis rutrum auctor, erat est mattis velit, vel luctus est nisl",
@@ -36,7 +36,7 @@ let projectData = [
     tags: "#fullstack, #css",
   },
   {
-    image: "img/project-5.png",
+    image: "assets/img/project-5.png",
     name: "project five",
     detail:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, augue quis rutrum auctor, erat est mattis velit, vel luctus est nisl",
@@ -45,7 +45,7 @@ let projectData = [
     tags: "#fullstack",
   },
   {
-    image: "img/project-6.png",
+    image: "assets/img/project-6.png",
     name: "project six",
     detail:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, augue quis rutrum auctor, erat est mattis velit, vel luctus est nisl",
@@ -54,7 +54,7 @@ let projectData = [
     tags: "#css",
   },
   {
-    image: "img/project-7.png",
+    image: "assets/img/project-7.png",
     name: "project seven",
     detail:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, augue quis rutrum auctor, erat est mattis velit, vel luctus est nisl",
@@ -63,7 +63,7 @@ let projectData = [
     tags: "#javascript",
   },
   {
-    image: "img/project-8.png",
+    image: "assets/img/project-8.png",
     name: "project eight",
     detail:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, augue quis rutrum auctor, erat est mattis velit, vel luctus est nisl",
@@ -101,7 +101,7 @@ const createProjectCards = (data) => {
             <div class="project-card" data-tags="${data.tags}">
                 <div class="project-wrapper">
                     <div class="project-thumbnail">
-                        <img src="img/close.png" class="close-btn" alt="">
+                        <img src="assets/img/close.png" class="close-btn" alt="">
                         <img src="${data.image}" class="project-img" alt="">
                         <span class="tags">${data.tags}</span>
                     </div>

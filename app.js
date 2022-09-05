@@ -1,5 +1,4 @@
 // project cards open and close functions
-
 let projects = document.querySelectorAll(".project-card");
 
 projects.forEach((card, index) => {
@@ -24,7 +23,6 @@ projects.forEach((card, index) => {
 });
 
 // project filter function
-
 const tags = document.querySelectorAll(".filter-btn");
 
 tags.forEach((btn) => {
@@ -49,7 +47,6 @@ tags.forEach((btn) => {
 });
 
 // nav toggle
-
 let links = document.querySelectorAll(".links");
 
 links.forEach((link) => {
@@ -67,3 +64,13 @@ toggleBtn.addEventListener("click", () => {
   toggleBtn.classList.toggle("active");
   ul.classList.toggle("active");
 });
+
+
+const socialUrls = () => {
+  const github = document.getElementById('github');
+  const twitter = document.getElementById('twitter');
+  const linkedin = document.getElementById('linkedin');
+  github.href = 'https://github.com/josexs';
+}
+
+socialUrls()
