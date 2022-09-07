@@ -1,87 +1,5 @@
-// let projectData = [
-//   {
-//     image: "assets/img/project-1.png",
-//     name: "project one",
-//     detail:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, augue quis rutrum auctor, erat est mattis velit, vel luctus est nisl",
-//     github: "#",
-//     live: "#",
-//     tags: "#javascript, #fullstack, #css",
-//   },
-//   {
-//     image: "assets/img/project-2.png",
-//     name: "project two",
-//     detail:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, augue quis rutrum auctor, erat est mattis velit, vel luctus est nisl",
-//     github: "#",
-//     live: "#",
-//     tags: "#javascript, #css",
-//   },
-//   {
-//     image: "assets/img/project-3.png",
-//     name: "project three",
-//     detail:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, augue quis rutrum auctor, erat est mattis velit, vel luctus est nisl",
-//     github: "#",
-//     live: "#",
-//     tags: "#javascript",
-//   },
-//   {
-//     image: "assets/img/project-4.png",
-//     name: "project four",
-//     detail:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, augue quis rutrum auctor, erat est mattis velit, vel luctus est nisl",
-//     github: "#",
-//     live: "#",
-//     tags: "#fullstack, #css",
-//   },
-//   {
-//     image: "assets/img/project-5.png",
-//     name: "project five",
-//     detail:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, augue quis rutrum auctor, erat est mattis velit, vel luctus est nisl",
-//     github: "#",
-//     live: "#",
-//     tags: "#fullstack",
-//   },
-//   {
-//     image: "assets/img/project-6.png",
-//     name: "project six",
-//     detail:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, augue quis rutrum auctor, erat est mattis velit, vel luctus est nisl",
-//     github: "#",
-//     live: "#",
-//     tags: "#css",
-//   },
-//   {
-//     image: "assets/img/project-7.png",
-//     name: "project seven",
-//     detail:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, augue quis rutrum auctor, erat est mattis velit, vel luctus est nisl",
-//     github: "#",
-//     live: "#",
-//     tags: "#javascript",
-//   },
-//   {
-//     image: "assets/img/project-8.png",
-//     name: "project eight",
-//     detail:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, augue quis rutrum auctor, erat est mattis velit, vel luctus est nisl",
-//     github: "#",
-//     live: "#",
-//     tags: "#css",
-//   },
-// ];
-
- const httpGet = (theUrl) => {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false );
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
- }
-
-const response = httpGet('https://api.github.com/users/josexs/repos?per_page=100')
-const githubProjects = JSON.parse(response);
+const responseGithub = httpGet('https://api.github.com/users/josexs/repos?per_page=100')
+const githubProjects = JSON.parse(responseGithub);
 const excludeProjects = 'josexs.github.io josexs josexs-card';
 const projectData = [];
 githubProjects.forEach((project) => {
@@ -98,9 +16,8 @@ githubProjects.forEach((project) => {
   }
 });
 
-console.log(projectData)
 
-const createTags = () => {
+const createTagsForProjects = () => {
   const tags = [];
   projectData.map((item) => {
     item.tags.forEach((item) => {
@@ -110,16 +27,17 @@ const createTags = () => {
     });
   });
 
-  const filterContainer = document.querySelector(".filter");
+  const filterContainer = document.getElementById("filterProjects");
+  console.log(filterContainer)
   filterContainer.innerHTML += `<button class="btn filter-btn active">Todos</button>`;
 
   tags.forEach((tag) => {
-    filterContainer.innerHTML += `<button class="btn filter-btn">${tag}</button>`;
+    filterContainer.innerHTML += `<button class="btn filter-btn capitalize">${tag}</button>`;
   });
 };
 
 const createProjectCards = (data) => {
-  let projectContainer = document.querySelector(".project-container");
+  let projectContainer = document.getElementById("project-container");
 
   projectContainer.innerHTML += `
             <div class="project-card" data-tags="${data.tags}">
@@ -140,5 +58,5 @@ const createProjectCards = (data) => {
     `;
 };
 
-createTags();
+createTagsForProjects();
 projectData.forEach((data) => createProjectCards(data));

@@ -15,6 +15,7 @@
         <ul class="nav-links-container">
             <li class="nav-link"><a href="#home-section" class="links active">Inicio</a></li>
             <li class="nav-link"><a href="#about-section" class="links">Sobre mi</a></li>
+            <li class="nav-link"><a href="#article-section" class="links">Articulos</a></li>
             <li class="nav-link"><a href="#project-section" class="links">Proyectos</a></li>
             <li class="nav-link"><a href="#contact-section" class="links">Contacto</a></li>
         </ul>
@@ -32,7 +33,7 @@
         <div class="content">
             <h1 class="header-heading">Hola, soy <span class="brand-name">Jose<span>XS</span></span></h1>
             <div class="contact-div">
-                <a href="#contact-section" class="btn">Contactar</a>
+                <a href="#about-section" class="btn">¿Quien?</a>
             </div>
         </div>
     </header>
@@ -69,13 +70,22 @@
     </section>
 
 
+    <section id="article-section">
+        <h1 class="heading">Articulos</h1>
+
+        <div id="filterArticles" class="filter"></div>
+
+        <!--  articles cards -->
+        <div id="article-container" class="article-container"></div>
+    </section>
+    
     <section id="project-section">
         <h1 class="heading">Proyectos</h1>
 
-        <div class="filter"></div>
+        <div id="filterProjects" class="filter"></div>
 
         <!--  project cards -->
-        <div class="project-container"></div>
+        <div id="project-container" class="project-container"></div>
     </section>
 
     <section id="contact-section">
@@ -90,7 +100,9 @@
     </section>
 </body>
 
+<script src="./utils.js"></script>
 <script src="./project.js"></script>
+<script src="./articles.js"></script>
 <script src="./app.js"></script>
 
 </html>

@@ -235,6 +235,7 @@ body {
   font-weight: 300;
   margin: 40px 0;
   text-transform: capitalize;
+  text-align: center;
 }
 
 .skills {
@@ -350,13 +351,56 @@ body {
   left: -8%;
 }
 
+/* article section */
+
+#article-section {
+  /* position: relative;
+  margin: 50px 0;
+  padding: 0 10vw;
+  margin-top: -100px; */
+  position: relative;
+  padding: 100px 10vw;
+}
+
+.article-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: relative;
+}
+
+.article-card {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  transition: 0.5s;
+  border-radius: 5px;
+  position: relative;
+}
+
+.article-thumbnail {
+  width: 100%;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.article-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+
 /* project section */
 
 #project-section {
-  position: relative;
+  /* position: relative;
   margin: 50px 0;
   padding: 0 10vw;
-  margin-top: -100px;
+  margin-top: 0px; */
+  position: relative;
+  padding: 100px 10vw;
 }
 
 .filter {
@@ -393,7 +437,7 @@ body {
   display: flex;
   background: #ebebeb;
   transition: 0.5s;
-  border-radius: 5px;
+  border-radius: 10px;
   position: relative;
 }
 
@@ -671,15 +715,15 @@ textarea {
   }
 
   .header {
-    height: auto;
-    padding: 100px 10vw;
+    height: 100vh;
+    padding: 50px 10vw;
     flex-direction: column-reverse;
     gap: 100px;
   }
 
   .content {
     text-align: center;
-    margin-top: 11rem;
+    margin-top: 2.5rem;
     margin-bottom: 2.5rem;
   }
 
