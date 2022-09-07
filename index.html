@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JoseXS</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 
-<body>
+<body class="animate__animated animate__fadeIn">
     <nav class="navbar">
         <h1 class="logo">JoseXS</h1>
         <ul class="nav-links-container">
@@ -33,7 +34,7 @@
         <div class="content">
             <h1 class="header-heading">Hola, soy <span class="brand-name">Jose<span>XS</span></span></h1>
             <div class="contact-div">
-                <a href="#about-section" class="btn">¿Quien?</a>
+                <div class="animate__animated animate__pulse"><a href="#about-section" class="btn">¿Quien?</a></div>
             </div>
         </div>
     </header>
@@ -78,7 +79,7 @@
         <!--  articles cards -->
         <div id="article-container" class="article-container"></div>
     </section>
-    
+
     <section id="project-section">
         <h1 class="heading">Proyectos</h1>
 
@@ -91,11 +92,11 @@
     <section id="contact-section">
         <h1 class="heading">Contacto</h1>
         <div class="form">
-            <input type="text" placeholder="Nombre">
-            <input type="email" placeholder="Email">
-            <input type="text" placeholder="Asunto">
-            <textarea placeholder="Mensaje"></textarea>
-            <button class="contact-btn">Contactar</button>
+            <form action="https://formspree.io/f/xlevglwy" method="POST">
+                <input name="email" type="email" placeholder="Email">
+                <textarea name="message" placeholder="Mensaje"></textarea>
+                <button type="submit" class="contact-btn">Contactar</button>
+            </form>
         </div>
     </section>
 </body>

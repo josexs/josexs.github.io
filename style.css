@@ -368,29 +368,62 @@ body {
   flex-wrap: wrap;
   gap: 10px;
   position: relative;
+  justify-content: center;
 }
 
 .article-card {
-  width: 100%;
+  width: 250px;
   overflow: hidden;
   display: flex;
   transition: 0.5s;
-  border-radius: 5px;
+  border-radius: 10px;
   position: relative;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid #cecece;
+  cursor: pointer;
 }
 
 .article-thumbnail {
   width: 100%;
   position: relative;
-  border-radius: 5px;
+  border-radius: 10px;
   overflow: hidden;
 }
 
-.article-title {
-  font-size: 1.3rem;
-  font-weight: 500;
+.article-body {
+  padding: .5rem;
 }
 
+.article-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    border-bottom: 1px solid #cecece;
+    padding-bottom: 0.25rem;
+}
+
+.article-detail {
+  font-size: 16px;
+  line-height: 20px;
+  margin: .5rem 0;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.article-tags {
+  font-size: .8rem;
+  color: #cecece;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  text-transform: capitalize;
+}
+
+.article-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* project section */
 
@@ -444,8 +477,9 @@ body {
 .project-thumbnail {
   width: 100%;
   position: relative;
-  border-radius: 5px;
+  border-radius: 10px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .close-btn {
@@ -492,6 +526,7 @@ body {
 .project-card.active .project-thumbnail {
   width: 300px;
   height: 300px;
+  cursor:auto;
 }
 
 .project-card.active .close-btn {
@@ -516,7 +551,7 @@ body {
   width: 300px;
   height: 300px;
   background: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 30px;
   border: 1px solid #cecece;
 }
@@ -560,7 +595,7 @@ textarea {
   padding: 1vw;
   background-color: #fff;
   border: 1px solid #cecece;
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 10px 0;
   outline: none;
 }
@@ -585,7 +620,7 @@ textarea {
   font-size: 1rem;
   text-transform: capitalize;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-top: 20px;
 }
 
@@ -657,7 +692,7 @@ textarea {
     width: 50px;
     height: 40px;
     border: 1px solid #cecece;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
