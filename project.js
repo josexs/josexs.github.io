@@ -1,21 +1,29 @@
-const responseGithub = httpGet('https://api.github.com/users/josexs/repos?per_page=100')
+const responseGithub = httpGet(
+  "https://api.github.com/users/josexs/repos?per_page=100"
+);
 const githubProjects = JSON.parse(responseGithub);
-const excludeProjects = 'josexs.github.io josexs josexs-card';
-const projectData = [];
+const excludeProjects = "josexs.github.io josexs josexs-card";
+const projectData = [
+  {
+    name: "CarsTournaments",
+    image: `assets/img/carsTournaments.png`,
+    detail: "Torneos ficticios para coches",
+    github: "https://github.com/carsTournaments",
+    tags: ["typescript", "Ionic"],
+  },
+];
 githubProjects.forEach((project) => {
-  const exclude = excludeProjects.includes(project.name)
+  const exclude = excludeProjects.includes(project.name);
   if (!exclude) {
     return projectData.push({
       name: project.name,
       image: `assets/img/${project.name}.png`,
-      detail: project.description ?? '',
+      detail: project.description ?? "",
       github: project.html_url,
-      live: project.homepage ?? '',
-      tags: project.topics
-    })
+      tags: project.topics,
+    });
   }
 });
-
 
 const createTagsForProjects = () => {
   const tags = [];
@@ -60,7 +68,6 @@ const createProjectCards = (data) => {
 createTagsForProjects();
 projectData.forEach((data) => createProjectCards(data));
 
-
 // project cards open and close functions
 const projects = document.querySelectorAll(".project-card");
 
@@ -93,7 +100,11 @@ tagsProjects.forEach((btn) => {
       if (btn.innerHTML.toLowerCase() == "todos") {
         card.style.display = "block";
       } else {
-        if (card.getAttribute("project-tags").includes(btn.innerHTML.toLowerCase())) {
+        if (
+          card
+            .getAttribute("project-tags")
+            .includes(btn.innerHTML.toLowerCase())
+        ) {
           card.style.display = "block";
         } else {
           card.style.display = "none";
