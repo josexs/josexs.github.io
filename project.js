@@ -2,7 +2,7 @@ const responseGithub = httpGet(
   "https://api.github.com/users/josexs/repos?per_page=100"
 );
 const githubProjects = JSON.parse(responseGithub);
-const excludeProjects = "josexs.github.io josexs josexs-card";
+const excludeProjects = "josexs.github.io josexs josexs-card react-gif-expert";
 const projectData = [
   {
     name: "CarsTournaments",
